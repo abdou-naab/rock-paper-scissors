@@ -1,0 +1,7 @@
+{
+    "javascript.suggest.paths": false,
+    "typescript.suggest.paths": false,
+    "path-intellisense.autoTriggerNextSuggestion": true,
+    "editor.formatOnPaste": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
