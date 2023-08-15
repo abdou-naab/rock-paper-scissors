@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="logic.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="logic.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>RPS Game</title>
+  </head>
+  <body>
+    <header>welcome to Rock, Paper, Scissors Game !</header>
 
-</head>
-<body>
-    <header>
-        welcome to Rock, Paper, Scissors Game !
-    </header>
-
-    <div class="player">
-        <img class="player-waving" src="imgs/rock-p.svg">
+    <div class="play-container">
+      <div class="player">
+        <img src="imgs/rock-p.png" />
         <div class="choices">
-            <img src="imgs/rock_7756809.svg">
-            <img src="imgs/paper_1102064.svg">
-            <img src="imgs/cut_552962.svg">
+          <img src="imgs/rock.gif" />
+          <img src="imgs/paper.gif" />
+          <img src="imgs/scissors.gif" />
         </div>
-    </div>
-    <div class="computer">
-        <img  src="imgs/rock-c.svg">
+      </div>
+
+      <div class="computer">
+        <img src="imgs/rock-c.png" />
         <div class="choices">
-            <img src="imgs/rock_7756809.svg">
-            <img src="imgs/paper_1102064.svg">
-            <img src="imgs/cut_552962.svg">
+          <img src="imgs/rock.gif" />
+          <img src="imgs/paper.gif" />
+          <img src="imgs/scissors.gif" />
         </div>
+      </div>
     </div>
 
-    <p class=" player-score">0</p>
-    <p class=" computer-score"> 0</p>
+    <div class="score">
+      <p class="player-score">0</p>
+      <p class="computer-score">0</p>
+    </div>
 
     <div class="results">
-        <button> Reset Game</button>
+      <button id="reset">Reset Game</button>
     </div>
 
-    <footer>
-        &#169; abderrahmane naab
-    </footer>
-
-    <!-- <script>
-        game();
-    </script> -->
-</body>
+    <footer>&#169; abderrahmane naab 2023</footer>
+  </body>
 </html>

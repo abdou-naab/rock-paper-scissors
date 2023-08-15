@@ -1,74 +1,88 @@
-html, body, *{
-    margin: 0;
-    padding: 0;
-}
-body{
-    height: 100vh;
-    width: 100wh;
-
-    display: grid;
-    grid-template-columns: minmax(310px, 1fr) minmax(310px, 1fr);
-    grid-template-rows: 10% 1fr 10% 20% 5% ;
-}
-header, footer{
-    background-color: blue;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header{
-    grid-column:  1 / span 2;
-    grid-row-start: 1;
-}
-footer{
-    grid-column:  1 / span 2;
-    grid-row-start: 5;
+@font-face {
+  font-family: "Nordic";
+  src: url("fonts/NORDIC LIGHT.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Outskirts";
+  src: url("fonts/The\ Outskirts.ttf") format("truetype");
+}
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Nordic, Tahoma, sans-serif;
+}
+header {
+  font-size: 1.4rem;
+}
+footer {
+  font-family: "Gill Sans", "Arial Narrow", sans-serif;
+}
+
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+}
+header {
+  height: 10vh;
+}
+/* play-container */
+.choices img {
+  width: 8vw;
+  height: auto;
+}
 .player > img,
-.computer > img{
-    max-width: 300px;
-    max-height: 125px;
+.computer > img {
+  padding-top: 3rem;
+  width: 35vw;
+  height: auto;
 }
-.choices img{
-    max-width: 120px;
-    max-height: 50px;
+.play-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 4;
+  min-width: 30rem;
 }
 
+/* score */
+.score {
+  display: flex;
+  justify-content: center;
+  flex-grow: 2;
+  align-items: center;
+  gap: 3vw;
+  font-size: 1.3rem;
+}
+
+.results {
+  flex-grow: 1;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#reset {
+  font-size: 1rem;
+  border: 0.1em solid #ccc;
+  border-radius: 0.2em;
+  padding: 0.4em 0.8em;
+  font-family: Nordic, sans-serif;
+}
 .player,
-.computer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.computer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.player-score,
-.computer-score{
-    display: flex;
-    justify-content: center;
-}
-
-.results{
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-
-/* .player-waving {
-    animation: waveAnimation 2s infinite;
-    transform-origin: left center; 
-}
-
-@keyframes waveAnimation {
-    0%, 100% {
-        transform: rotate(0deg); 
-    }
-    50% {
-        transform: rotate(30deg);
-    }
-} 
-*/
