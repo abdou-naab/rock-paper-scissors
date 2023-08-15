@@ -65,6 +65,29 @@ function game() {
   }
 }
 
+let playerRock = document.querySelector(".player .choices :nth-child(1)");
+let playerPaper = document.querySelector(".player .choices :nth-child(2)");
+let playerScissors = document.querySelector(".player .choices :nth-child(3)");
+
+playerRock.addEventListener("mouseover", function () {
+  playerRock.setAttribute("src", "imgs/rock-0000.jpg");
+});
+playerRock.addEventListener("mouseout", function () {
+  playerRock.setAttribute("src", "imgs/rock.gif");
+});
+playerPaper.addEventListener("mouseover", function () {
+  playerPaper.setAttribute("src", "imgs/paper-0000.jpg");
+});
+playerPaper.addEventListener("mouseout", function () {
+  playerPaper.setAttribute("src", "imgs/paper.gif");
+});
+playerScissors.addEventListener("mouseover", function () {
+  playerScissors.setAttribute("src", "imgs/scissors-0000.jpg");
+});
+playerScissors.addEventListener("mouseout", function () {
+  playerScissors.setAttribute("src", "imgs/scissors.gif");
+});
+
 // let rock = document.getElementById('player-rock')
 // let paper = document.getElementsByClassName('player-paper')
 // let scissors = document.getElementsByClassName('player-scissors')

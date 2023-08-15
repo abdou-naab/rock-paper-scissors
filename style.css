@@ -41,20 +41,20 @@ header {
 .choices img {
   width: 8vw;
   height: auto;
+  transition-property: transform;
+  transition-duration: 0.39s;
+  /* transition-delay: 0s; */
 }
-.player > img,
-.computer > img {
-  padding-top: 3rem;
-  width: 35vw;
-  height: auto;
+.player .choices img:hover {
+  transform: translateY(-30px);
 }
+
 .play-container {
   display: flex;
   justify-content: center;
   flex-grow: 4;
   min-width: 30rem;
 }
-
 /* score */
 .score {
   display: flex;
@@ -85,4 +85,49 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+@keyframes leftWaver {
+  0% {
+    transform: rotate(-13deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes rightWaver {
+  0% {
+    transform: rotate(13deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.player > img,
+.computer > img {
+  padding-top: 3rem;
+  width: 35vw;
+  height: auto;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+}
+.player > img {
+  transform-origin: left;
+  animation-name: leftWaver;
+}
+.computer > img {
+  transform-origin: right;
+  animation-name: rightWaver;
 }
